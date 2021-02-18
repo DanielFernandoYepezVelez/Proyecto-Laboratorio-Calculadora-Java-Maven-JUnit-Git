@@ -7,10 +7,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-/**
- * Hello world!
- *
- */
 public class App {
     private static final Logger logger = LoggerFactory.getLogger(App.class);
 
@@ -27,8 +23,15 @@ public class App {
         Long number2 = Long.valueOf(textNumber2);
 
         BasicCalculator calculator = new BasicCalculator();
-        Long result = calculator.sum(number1, number2);
 
-        System.out.println(number1 + " + " + number2 + " = " + result);
+        Long resultSum = calculator.sum(number1, number2);
+        Long resultSub = calculator.sub(number1, number2);
+        Long resultMul = calculator.mul(number1, number2);
+        Long resultDiv = calculator.div(number1, number2);
+
+        System.out.println(number1 + " + " + number2 + " = " + resultSum);
+        System.out.println(number1 + " - " + number2 + " = " + resultSub);
+        System.out.println(number1 + " * " + number2 + " = " + resultMul);
+        System.out.println(number1 + " / " + number2 + " = " + resultDiv);
     }
 }
